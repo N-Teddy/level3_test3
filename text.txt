@@ -1,0 +1,17 @@
+-> room table
+-the room table was separated from [special amenity] because the room is a part of [special amenity] which will act as a category. and its relation is 0:n not 1:n because not all the rooms may ave them
+
+->room reservation
+-the relationship between [room_reservation] and [room] is 0:n and not 1:0 because not all rooms have a reservation
+-the relationship between [room_reservation] and [reservation_status] is a 1:1 because if there is a reservation there must be a status
+-the relationship between [room_reservation] and [customer] is a 1:1 because customers are those who reserve a room and there is no exception
+
+->customer
+-the relationship between [customer] and [customer_feedback] is 0:n a customer is not forced to give a feedback and if a customer reserve multiplle rooms he/she will have different feedback for each of the rooms 
+-the relationship between [customer] and [billing_and_payment] is 1:1 because at the end of the day each customer must have a bill and the bill will be the total of all his expenses which often comes as one
+-the relationship between [customer] and [hotel_service] is 0:n because a customer can chose not to benefit from the services and at the same time he/she can enjiy more than one service
+
+->hotel_service
+-the relationship between [hotel_service] and [hotel] is 1:n because the said hotel is said to have many services
+
+->
